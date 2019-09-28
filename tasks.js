@@ -27,3 +27,31 @@ function birthdayCakeCandles(ar) {
     }
     return count;
 }
+console.log(birthdayCakeCandles([3, 2, 1, 3]));
+
+
+
+                  // Complete the miniMaxSum function below.
+function miniMaxSum(arr) {
+    var min = 0;
+    var max = 0;
+    for (var i = 0; i < arr.length; i++) {
+        for (var j = i + 1; j < arr.length; j++) {
+            if (arr[j] < arr[i]) {
+                var sort = arr[j];
+                arr[j] = arr[i];
+                arr[i] = sort;
+            }
+        }
+    }
+    for (let i = 0; i < arr.length; i++) {
+        if (i != 0) {
+            max += arr[i];
+        }
+        if (i != arr.length - 1) {
+            min += arr[i]
+        }
+    }
+    console.log(min + " " + max);
+}
+miniMaxSum([1,2,3,4,5]);
