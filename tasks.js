@@ -55,3 +55,33 @@ function miniMaxSum(arr) {
     console.log(min + " " + max);
 }
 miniMaxSum([1,2,3,4,5]);
+
+
+
+
+// Complete the staircase function below.
+function staircase(n) {
+    let str = "",
+    space = 0,
+    hash = 0;
+    for(var i = 0; i < n; i++){
+        space = n - i - 1;
+        hash = i + 1;
+        for(let y = 0; y < space; y++){
+            str += " ";
+        }
+        for(let a = 0; a < hash; a++){
+            str += "#";
+        }
+        console.log(str);
+        str = "";
+    }
+
+}
+
+function main() {
+    const n = parseInt(readLine(), 10);
+
+    staircase(n);
+}
+
