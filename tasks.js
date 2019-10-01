@@ -78,10 +78,5 @@ function staircase(n) {
     }
 
 }
-
-function main() {
-    const n = parseInt(readLine(), 10);
-
-    staircase(n);
-}
+staircase(10)
 
